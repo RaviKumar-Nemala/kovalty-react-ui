@@ -23,7 +23,6 @@ const Fotter = () => {
               key={id}
               fontSize={14}
               fontWeight={400}
-              fontFamily="serif"
               paddingBottom={1}
               onClick={() => {
                 window.location.hash = "";
@@ -89,7 +88,7 @@ const Fotter = () => {
             </Stack>
           </a>
         </Grid>
-        <Grid item xs={12} md={4}>
+        {/* <Grid item xs={12} md={4}>
           <Typography
             color="#08126B"
             fontSize={18}
@@ -112,7 +111,7 @@ const Fotter = () => {
               Location Services
             </Typography>
           </a>
-        </Grid>
+        </Grid> */}
       </Grid>
     </StyledFotterContainer>
   );

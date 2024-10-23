@@ -5,8 +5,8 @@ import TopBanner from "./components/TopBanner";
 import Services from "./components/Services";
 import Insights from "./components/Insights";
 import AboutUs from "./components/AboutUs";
-import Industries from "./components/Industries";
-import ContactUs from "./components/ContactUs";
+// import Industries from "./components/Industries";
+// import ContactUs from "./components/ContactUs";
 import Fotter from "./components/Fotter";
 
 const Home: React.FC = () => {
@@ -25,9 +25,9 @@ const Home: React.FC = () => {
       <Services />
       <Insights />
       <AboutUs />
-      <Industries />
+      {/* <Industries /> */}
       {/* <Careers /> */}
-      <ContactUs />
+      {/* <ContactUs /> */}
       <Fotter/>
       </div>
     </div>

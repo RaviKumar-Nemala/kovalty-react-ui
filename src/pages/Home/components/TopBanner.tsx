@@ -68,13 +68,12 @@ const TopBanner = () => {
     <Stack                    height = "100%" flexDirection = "row">
         <LeftContentContainer>
           <StyledContentOne
-            fontFamily   = "roboto"
             fontWeight   = {600}
             marginBottom = {3}
           >
             The all-in-one Project management Platform made for client work
           </StyledContentOne>
-          <StyledContentTwo fontFamily = "roboto" fontWeight = {600}>
+          <StyledContentTwo fontWeight = {600}>
             Find out how Kovalty helps you to build your new project with new
             technologies{" "}
           </StyledContentTwo>

@@ -21,11 +21,11 @@ const drawerWidth = 240;
 // Update navItems to include IDs for scrolling
 export const navItems = [
   { label: "Insights", id: "insights" },
-  { label: "Industries", id: "industries" },
+  // { label: "Industries", id: "industries" },
   { label: "Services", id: "services" },
-  { label: "Careers", id: "careers" },
+  // { label: "Careers", id: "careers" },
   { label: "About Us", id: "about" },
-  { label: "Contact Us", id: "contact" },
+  // { label: "Contact Us", id: "contact" },
 ];
 
 const StyledAppBar = styled(MuiAppBar)`

@@ -21,7 +21,7 @@ const Careers = () => {
   return (
     <StyledCareersContainer id="careers">
       <StyledTitle>Careers</StyledTitle>
-      <Typography fontFamily="monospace" fontWeight={900} fontSize='18px'>Everyone has an opportunity to grow in their career through our Kovalty </Typography>
+      <Typography fontWeight={900} fontSize='18px'>Everyone has an opportunity to grow in their career through our Kovalty </Typography>
     </StyledCareersContainer>
   )
 }

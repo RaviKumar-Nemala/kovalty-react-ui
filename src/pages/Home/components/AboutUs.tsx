@@ -82,7 +82,7 @@ const AboutUs = () => {
       <StyledTitle>About Us</StyledTitle>
       <CardItem description={DescriptionOne} img="/assets/about-us-1.png" />
       <CardItem description={DescriptionOne} img="/assets/about-us-2.png" />
-      <Typography fontStyle="italic" fontFamily="monospace" fontWeight={900} textAlign='center' fontSize='18px'>
+      <Typography fontStyle="italic" fontWeight={900} textAlign='center' fontSize='18px'>
         “Our team kovalty never disappoint a client , we follow guidelines
         throughout the completion of the project “ - Kovalty team{" "}
       </Typography>

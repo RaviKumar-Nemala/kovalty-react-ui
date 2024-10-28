@@ -2,9 +2,9 @@ import { Box, Stack, styled, Typography } from "@mui/material";
 
 const StyledTopBannerContainer = styled(Box)`
   background: linear-gradient(
-    100.5deg,
-    rgba(255, 255, 255, 0.901961) 61.5%,
-    rgba(116, 105, 182, 0.541176) 72.5%
+    180deg,
+    rgba(255, 255, 255, 0.901961) 30.5%,
+    rgba(116, 105, 182, 0.541176) 70.5%
   );
   border-bottom: 1px solid #00000033;
   padding-top  : 150px;

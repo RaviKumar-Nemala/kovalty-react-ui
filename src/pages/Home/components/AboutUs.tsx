@@ -1,8 +1,12 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, styled, Typography, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 
 const DescriptionOne =
-  "At Kovalty teeam , we are passionate about transforming ideas into robust web solutions. With a focus on creativity and technical expertise, we strive to exceed client expectations through personalized service and a collaborative approach to every project.";
+  "At Kovalty team , we are passionate about transforming ideas into robust web solutions. With a focus on creativity and technical expertise, we strive to exceed client expectations through personalized service and a collaborative approach to every project.";
+
+const DescriptionTwo =
+  "Kovalty specializes in providing staffing and customized software solutions for enterprise clients, guided by core values of learning, innovation, quality, and customer satisfaction. Our skilled team, with extensive expertise across technology domains, helps us meet client needs and drive impactful results. We focus on delivering top talent supported by the latest technologies, offering ongoing training and career support to ensure success for both our clients and our talent.";
+
 
 const StyledServicesContainer = styled(Box)`
   padding: 100px 30px 0px 30px;
@@ -20,69 +24,83 @@ const StyledTitle = styled(Typography)`
   }
 `;
 
-const ImageContainer = styled(Box)`
-  height: 260px;
-  width:400px;
-  position: relative;
-  top:-100%;
-  right: -95%;
-  z-index: -1;
-  display: block;
-  @media (max-width: 900px) {
-    display: none;
-    max-width: 0%;
-  }
-`;
-
-const DescriptionBox = styled(Box)`
-  background-color:#FFFFFF;
-  border: 1px solid #00000033;
-  box-shadow: 0px 4px 4px 0px #00000040;
-  height: 170px;
-  padding: 15px 30px;
-  position: relative;
-  left:50px;
-`;
-
-const CardContainer = styled(Box)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 270px;
-  margin:30px 0px;
-`;
-
-const CardItem = ({
-  img,
-  description,
-}: {
-  img: string;
-  description: string;
-}) => {
-  return (
-    <CardContainer >
-      <DescriptionBox width="60%">
-        <Typography>{description}</Typography>
-        <ImageContainer>
-          <Box
-            component="img"
-            src={img}
-            alt="Kovalty Technologies"
-            style={{ height: "100%", width: "100%" }}
-          />
-        </ImageContainer>
-      </DescriptionBox>
-    </CardContainer>
-  );
-};
-
 const AboutUs = () => {
+  const theme = useTheme();
+  const isSmOrLess = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <StyledServicesContainer id="about">
       <StyledTitle>About Us</StyledTitle>
-      <CardItem description={DescriptionOne} img="/assets/about-us-1.png" />
-      <CardItem description={DescriptionOne} img="/assets/about-us-2.png" />
-      <Typography fontStyle="italic" fontWeight={900} textAlign='center' fontSize='18px'>
+      <Card
+        sx={{
+          display: "flex",
+          flexDirection: isSmOrLess ? "column" : "row",
+          alignItems: isSmOrLess ? "center" : "flex-start",
+          margin: isSmOrLess ? "10px auto" :"10px 80px",
+          backgroundColor:theme.palette.background.paper
+        }}
+      >
+        <CardContent
+          sx={{
+            padding: 2,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <Typography variant="body1" color="text.primary">
+            {DescriptionOne}
+          </Typography>
+        </CardContent>
+
+        <CardMedia
+          component="img"
+          image="/assets/about-us-1.png"
+          alt="Sample Image"
+          sx={{
+            width: isSmOrLess ? "100%" : 180,
+            height: isSmOrLess ? 150 : 180,
+          }}
+        />
+      </Card>
+      <Card
+        sx={{
+          display: "flex",
+          flexDirection: isSmOrLess ? "column" : "row",
+          alignItems: isSmOrLess ? "center" : "flex-start",
+          margin: isSmOrLess ? "auto" :"auto 80px",
+        }}
+      >
+        <CardMedia
+          component="img"
+          image="/assets/about-us-2.png"
+          alt="Sample Image"
+          sx={{
+            width: isSmOrLess ? "100%" : 220,
+            height: isSmOrLess ? 150 : 220,
+          }}
+        />
+        <CardContent
+          sx={{
+            padding: 2,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <Typography variant="body1" color="text.primary">
+            {DescriptionTwo}
+          </Typography>
+        </CardContent>
+      </Card>
+      <Typography
+        fontStyle="italic"
+        fontWeight={800}
+        textAlign="center"
+        fontSize="18px"
+        mt={4}
+      >
         “Our team kovalty never disappoint a client , we follow guidelines
         throughout the completion of the project “ - Kovalty team{" "}
       </Typography>

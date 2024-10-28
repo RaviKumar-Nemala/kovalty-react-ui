@@ -5,9 +5,9 @@ const Description1 = '"Kovalty offers comprehensive project insights through adv
 
 const StyledTitle = styled(Typography)`
   font-size: 26px;
-  color: #222222;
+  color    : #222222;
   @media (max-width: 900px) {
-    font-size: 22px;
+    font-size : 22px;
     text-align: center;
   }
 `;
@@ -24,15 +24,15 @@ const InsightTextContainer = ({
   description,
   bgColor,
 }: {
-  title: string;
+  title      : string;
   description: string;
-  bgColor: string;
+  bgColor    : string;
 }) => (
-  <Box bgcolor={bgColor} padding={3}>
-    <Typography fontSize={24} color="white" pb={1}>
+  <Box        bgcolor  = {bgColor} padding = {3}>
+  <Typography fontSize = {24} color        = "white" pb = {1}>
       {title}
     </Typography>
-    <Typography fontSize={16} color="white">
+    <Typography fontSize = {16} color = "white">
       {description}
     </Typography>
   </Box>
@@ -40,24 +40,24 @@ const InsightTextContainer = ({
 
 const Insights = () => {
   return (
-    <StyledInsightsContainer id="insights">
+    <StyledInsightsContainer id = "insights">
       <StyledTitle>Insights</StyledTitle>
-      <Box borderRadius={1} overflow='hidden'>
+      <Box borderRadius = {1} overflow = 'hidden'>
         <InsightTextContainer
-          bgColor="#7A6CCB"
-          title="Insight 1"
-          description={Description1}
+          bgColor     = "#7A6CCB"
+          title       = ""
+          description = {Description1}
+        />
+        {/* <InsightTextContainer
+          bgColor     = "#AD88C6"
+          title       = "Insight 2"
+          description = {Description1}
         />
         <InsightTextContainer
-          bgColor="#AD88C6"
-          title="Insight 2"
-          description={Description1}
-        />
-        <InsightTextContainer
-          bgColor="#E9D3EB"
-          title="Insight 3"
-          description={Description1}
-        />
+          bgColor     = "#E9D3EB"
+          title       = "Insight 3"
+          description = {Description1}
+        /> */}
       </Box>
     </StyledInsightsContainer>
   );

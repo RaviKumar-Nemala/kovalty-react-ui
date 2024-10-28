@@ -63,6 +63,17 @@ const AboutUs = () => {
           }}
         />
       </Card>
+     
+      <Typography
+        fontStyle  = "italic"
+        fontWeight = {800}
+        textAlign  = "center"
+        fontSize   = "18px"
+        margin     = "30px 20px"
+      >
+        “Our team kovalty never disappoint a client , we follow guidelines
+        throughout the completion of the project “ - Kovalty team{" "}
+      </Typography>
       <Card
         sx={{
           display: "flex",
@@ -94,16 +105,6 @@ const AboutUs = () => {
           </Typography>
         </CardContent>
       </Card>
-      <Typography
-        fontStyle="italic"
-        fontWeight={800}
-        textAlign="center"
-        fontSize="18px"
-        mt={4}
-      >
-        “Our team kovalty never disappoint a client , we follow guidelines
-        throughout the completion of the project “ - Kovalty team{" "}
-      </Typography>
     </StyledServicesContainer>
   );
 };

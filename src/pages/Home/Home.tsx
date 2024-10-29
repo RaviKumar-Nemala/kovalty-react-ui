@@ -6,8 +6,9 @@ import Services from "./components/Services";
 import Insights from "./components/Insights";
 import AboutUs from "./components/AboutUs";
 // import Industries from "./components/Industries";
-// import ContactUs from "./components/ContactUs";
+import ContactUs from "./components/ContactUs";
 import Fotter from "./components/Fotter";
+import Careers from "./components/Careers";
 
 const Home: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ const Home: React.FC = () => {
       <Insights />
       <AboutUs />
       {/* <Industries /> */}
-      {/* <Careers /> */}
+      <Careers />
       {/* <ContactUs /> */}
       <Fotter/>
       </div>

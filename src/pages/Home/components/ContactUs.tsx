@@ -2,8 +2,9 @@ import { FacebookRounded, Instagram, LinkedIn, X, YouTube } from '@mui/icons-mat
 import { Box, Button, styled, Typography } from '@mui/material';
 import React from 'react';
 
+// padding: 100px 30px 0px 30px;
+
 const StyledServicesContainer = styled(Box)`
-  padding: 100px 30px 0px 30px;
   @media (max-width: 900px) {
     padding: 50px 30px 0px 30px;
   }
@@ -48,7 +49,7 @@ const ContactUs = () => {
 
   return (
     <StyledServicesContainer id="contact">
-      <StyledTitle>Contact Us</StyledTitle>
+      {/* <StyledTitle>Contact Us</StyledTitle> */}
       <Box
         display="flex"
         justifyContent="center"
@@ -57,7 +58,7 @@ const ContactUs = () => {
       >
         {socialLinks.map((social, key) => (
           <Button
-           style = {{margin:'0px 5px'}}
+           style = {{margin:'0px 5px',marginRight:'10px'}}
             variant="contained"
             key={key}
             onClick={() => onClickLink(social.link)}
